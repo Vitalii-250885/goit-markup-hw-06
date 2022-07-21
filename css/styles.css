@@ -42,6 +42,10 @@ textarea {
     border-bottom: 1px solid #ECECEC;
 }
 
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
+
 .site-header {
     display: flex;
     align-items: center;
