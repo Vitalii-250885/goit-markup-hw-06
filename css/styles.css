@@ -286,6 +286,8 @@ textarea {
     width: 18px;
 
     fill: var(--secondary-text-color);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field:hover .form-icon {
@@ -319,12 +321,22 @@ textarea {
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field input:hover,
 .form-field input:focus,
-.form-field-comment textarea:hover {
+.form-field-comment textarea:hover,
+.form-field-comment textarea:focus {
     border: 1px solid var(--active-link-color);
+}
+
+.form-input:focus + .form-icon {
+    fill: var(--active-link-color);
+}
+
+::placeholder {
+    color: rgba(117, 117, 117, 0.5);
 }
 
 .form-field-comment textarea {
@@ -332,6 +344,8 @@ textarea {
     padding: 12px 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-term {
@@ -362,6 +376,42 @@ textarea {
     cursor: pointer;
 }
 
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.checkbox-lable {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.checkbox-icon {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border: solid 2px var(--secondary-text-color);
+    border-radius: 2px;
+}
+
+.checkbox:checked + .checkbox-icon {
+    background: var(--active-link-color);
+    background-image: url(../images/checkbox.svg);
+    background-size: contain;
+    border-color: var(--active-link-color);
+}
+
+.checkbox-text {
+    margin-left: 8px;
+}
+
 .icon-close {
     position: absolute;
     top: 8px;
@@ -373,6 +423,8 @@ textarea {
     border-radius: 50%; 
     padding: 6px;
     fill: #000;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-close:hover {
@@ -382,6 +434,10 @@ textarea {
 .close-button {
     border: 0;
     cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
 }
 
 .section-h {

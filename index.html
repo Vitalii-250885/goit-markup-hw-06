@@ -467,26 +467,26 @@
                 <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
                 <div class="form-field">
                     <label for="user-name" class="form-lable">Имя</label>
+                    <input type="text" name="user-name" id="user-name" class="form-input" autofocus>
                     <svg class="form-icon">
                         <use href="./images/sprite.svg#icon-person"></use>
                     </svg>
-                    <input type="text" name="user-name" id="user-name" class="form-input" autofocus>
                 </div>
                 
                 <div class="form-field">
                     <label for="tel" class="form-lable">Телефон</label>
+                    <input type="tel" name="tel" id="tel" class="form-input">
                     <svg class="form-icon">
                         <use href="./images/sprite.svg#icon-phone-18"></use>
                     </svg>
-                    <input type="tel" name="tel" id="tel">
                 </div>
                 
                 <div class="form-field">
                     <label for="mail" class="form-lable">Почта</label>
+                    <input type="email" name="mail" id="mail" class="form-input">
                     <svg class="form-icon">
                         <use href="./images/sprite.svg#icon-email"></use>
                     </svg>
-                    <input type="email" name="mail" id="mail">
                 </div>
                 
                 <div class="form-field-comment">
@@ -495,8 +495,11 @@
                 </div>
                 
                 <div class="form-term">
-                    <input type="checkbox" name="term" id="term">
-                    <label for="term">Соглашаюсь с рассылкой и принимаю <a href="" class="term-link">Условия договора</a></label> 
+                    <label class="checkbox-lable">
+                        <input class="checkbox" type="checkbox" name="term">
+                        <span class="checkbox-icon"></span>
+                        <span class="checkbox-text">Соглашаюсь с рассылкой и принимаю <a href="" class="term-link">Условия договора</a></span> 
+                    </label> 
                 </div>
                 
                 <button type="submit" class="button-submit">Отправить</button>
