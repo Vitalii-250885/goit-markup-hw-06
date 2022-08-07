@@ -176,8 +176,7 @@ textarea {
 
 .hero-section {
     background-color: #2F303A;
-    background: rgba(47, 48, 58, 0.4);
-    background-image: url(../images/hero-bgimg-min.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bgimg-min.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -459,6 +458,9 @@ textarea {
 }
 
 .privelege-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 270px;
     height: 120px;
     background-color: var(--secondary-bgcolor);
@@ -469,7 +471,6 @@ textarea {
 .privelege-icon {
     width: 70px;
     height: 70px;
-    margin: 25px 100px;
 }
 
 .privelege-list {
@@ -568,19 +569,20 @@ textarea {
     justify-content: center;
 }
 
-.team-icon-link {
+.team-icon-a {
     display: block;
     height: 44px;
     width: 44px;
     border-radius: 50%;
 }
 
-.team-icon-a .team-icon-link {
+.team-icon-a {
     background-color: #fff;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-icon-a:hover .team-icon-link{
+.team-icon-a:hover,
+.team-icon-a:focus {
     background-color: var(--active-link-color);
 }
 
@@ -593,7 +595,8 @@ textarea {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-icon-a:hover .team-icon {
+.team-icon-a:hover .team-icon,
+.team-icon-a:focus .team-icon {
     
     fill: #ffffff;
 }
@@ -629,7 +632,10 @@ textarea {
     justify-content:center;
 }
 
-.regular-customers-div {
+.regular-customers-icon-a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     width: 170px;
@@ -647,11 +653,13 @@ textarea {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.regular-customers-icon-a:hover .regular-customers-div {
+.regular-customers-icon-a:hover,
+.regular-customers-icon-a:focus {
     border-color: var(--active-link-color);
 }
 
-.regular-customers-icon-a:hover .regular-customers-icon {
+.regular-customers-icon-a:hover .regular-customers-icon,
+.regular-customers-icon-a:focus .regular-customers-icon {
     fill: var(--active-link-color);
 }
 
@@ -713,11 +721,12 @@ address {
     width: 20px;
     height: 20px;
     fill: #ffffff;
-    margin: 12px;
 }
 
-.social-footer-icon-div {
-    display: block;
+.social-footer-icon-a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 44px;
     width: 44px;
     border-radius: 50%;
@@ -726,7 +735,8 @@ address {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-footer-icon-a:hover .social-footer-icon-div{
+.social-footer-icon-a:hover,
+.social-footer-icon-a:focus {
     background: var(--active-link-color);
 }
 
